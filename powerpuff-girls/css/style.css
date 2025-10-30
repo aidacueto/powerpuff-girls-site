@@ -1,0 +1,129 @@
+/* ========= GLOBAL STYLES ========= */
+body {
+  margin: 0;
+  font-family: "Chango", helvetica, arial, sans-serif;
+  background-color: #98DAF1;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========= HEADER ========= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #33ACE3;
+  padding: 1rem 2rem;
+}
+
+.header__logo img {
+  height: 60px;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #EA6964;
+}
+
+.nav__link--active {
+  color: #E78C89;
+}
+
+/* ========= HERO SECTION ========= */
+.hero {
+  background: linear-gradient(180deg, #33ACE3 0%, #98DAF1 100%);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero__text {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+}
+
+.button--primary {
+  background-color: #EA6964;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.button--primary:hover {
+  background-color: #E78C89;
+}
+
+/* ========= MISSION SECTION ========= */
+.mission {
+  background-color: #81CB71;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.mission__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mission__text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+  background-color: #4AB62C;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+/* ========= ANIMATIONS ========= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__text {
+    font-size: 1rem;
+  }
+}
