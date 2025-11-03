@@ -1,4 +1,3 @@
-/* ========= GLOBAL STYLES ========= */
 body {
   margin: 0;
   font-family: "Chango", helvetica, arial, sans-serif;
@@ -15,7 +14,6 @@ a {
   text-decoration: none;
 }
 
-/* ========= HEADER ========= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -45,10 +43,9 @@ a {
 }
 
 .nav__link--active {
-  color: #E78C89;
+  color: #EA6964;
 }
 
-/* ========= HERO SECTION ========= */
 .hero {
   background: linear-gradient(180deg, #33ACE3 0%, #98DAF1 100%);
   color: white;
@@ -80,7 +77,6 @@ a {
   background-color: #E78C89;
 }
 
-/* ========= MISSION SECTION ========= */
 .mission {
   background-color: #81CB71;
   color: white;
@@ -99,7 +95,6 @@ a {
   font-size: 1.1rem;
 }
 
-/* ========= FOOTER ========= */
 .footer {
   background-color: #4AB62C;
   text-align: center;
@@ -107,13 +102,29 @@ a {
   padding: 1rem;
 }
 
-/* ========= ANIMATIONS ========= */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.header__logo img {
+  animation: bounceIn 1s ease-in-out;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ========= RESPONSIVE ========= */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -125,5 +136,78 @@ a {
 
   .hero__text {
     font-size: 1rem;
+  }
+}
+
+.characters {
+  background-color: #98DAF1;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.characters__title {
+  color: #EA6964;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.characters__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.character {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.character__image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.character__name {
+  font-size: 1.5rem;
+  color: #33ACE3;
+  margin-bottom: 0.5rem;
+}
+
+.character__description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.character--blossom .character__name {
+  color: #EA6964;
+}
+
+.character--bubbles .character__name {
+  color: #33ACE3;
+}
+
+.character--buttercup .character__name {
+  color: #4AB62C;
+}
+
+@media (max-width: 768px) {
+  .characters__grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
