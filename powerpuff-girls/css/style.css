@@ -3,6 +3,7 @@ body {
   font-family: "Chango", helvetica, arial, sans-serif;
   background-color: #98DAF1;
   color: #333;
+  z-index: -1;
 }
 
 img {
@@ -210,4 +211,129 @@ a {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.craig__section {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.craig-mccracken__bio {
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 70%;
+  padding: 2.5rem;
+  z-index: -1;
+}
+
+.craig__title {
+  color: #EA6964;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.craig__subtitle {
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.craig__image {
+  width: 45%;
+  height: auto;
+  float: left;
+  border-radius: 15px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  animation: slideIn 1s ease;
+}
+
+.ppg-stripes {
+  flex-direction: column;
+  position: absolute;
+  z-index: -1;
+  animation: slideIn-stripes 2s forwards;
+}
+
+.stripes1 {
+  height: 10vh;
+  width: 30vw;
+  background-color: #EA6964;
+}
+
+.stripes2 {
+  height: 10vh;
+  width: 30vw;
+  background-color: #4AB62C;
+}
+
+.stripes3 {
+  height: 10vh;
+  width: 30vw;
+  background-color: #33ACE3;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+
+  to { transform: translateX(0px);}
+}
+
+@keyframes slideIn-stripes {
+  0% { opacity: 1; transform: translateX(-100%); }
+
+  40% { opacity: 1; }
+
+  100% { opacity: 0; transform: translateX(0px); }
+}
+
+.craig__text {
+  font-size: 1.25rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+.craig__important {
+  color: #EA6964;
+}
+
+@media (max-width: 768px) {
+  .craig__title {
+    font-size: 3rem;
+  }
+
+  .craig__subtitle {
+    font-size: 2rem;
+  }
+
+  .craig__text {
+    font-size: 1rem;
+  }
+
+  .craig__image {
+    width: 100%;
+    float: none;
+    margin: auto;
+  }
+
+  .stripes1 {
+  height: 30px;
+  width: 30vw;
+}
+
+.stripes2 {
+  height: 30px;
+  width: 30vw;
+}
+
+.stripes3 {
+  height: 30px;
+  width: 30vw;
+}
 }
